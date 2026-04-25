@@ -61,7 +61,7 @@ def create_project(request):
                     description=form.cleaned_data['description']
                     
                 )
-                return redirect('/projects/')
+                return redirect('projects')
             except Exception as e:
                 return JsonResponse({
                     'message': 'Error creating project',

@@ -1,11 +1,24 @@
-<nav>
-    <a href="/">Home</a>
-    <a href="/projects">Projects</a>
-    <a href="/task/1">Tasks</a>
-    <a href="/about">About</a>
-    <a href="/create_task">NewTask</a>
-    <a href="/create_project">NewProject</a>
-</nav>
-
-{% block content %}
-{% endblock %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Project</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+    <body>
+        <nav class="navbar">
+        <a href="/">Home</a>
+        <a href="/projects">Projects</a>
+        <a href="/task/1">Tasks</a>
+        <a href="/about">About</a>
+        <a href="/create_task">NewTask</a>
+        <a href="/create_project">NewProject</a>
+    </nav>
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

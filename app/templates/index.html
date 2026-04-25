@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 <h1>
     Welcome to my app
 </h1>
+<img src="{% static 'django.png'%}" alt="img" width="1000px">
 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur dignissimos corporis debitis pariatur velit obcaecati, assumenda alias soluta sunt praesentium esse et minima laboriosam sed culpa provident incidunt. Numquam, placeat.</p>
 {% endblock %}
