@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Tareas</h1>
+<ul>
+    <li>Title: {{ task.title }}</li>
+    {% if task.estado == False %}
+        <p>tarea ha realizada</p>
+    {% else %}
+        <p>tarea finalizada</p>
+    {% endif %}
+    <li>Description: {{ task.description }}</li>
+    <li>Project: {{ task.project.name }}</li>
+    <br>
+    <button>delete</button>
+    <button>Done</button>
+</ul>
+{% endblock %}
